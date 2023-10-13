@@ -39,7 +39,7 @@ input {
     top: -10px;
 }
 
-input:checked ~ label .btn-modal::after {
+/* input:checked ~ label .btn-modal::after {
     transform: rotate(400deg);
     top: 0;
 }
@@ -47,10 +47,11 @@ input:checked ~ label .btn-modal::after {
 input:checked ~ label .btn-modal::before {
     transform: rotate(-400deg);
     top: 0;
-}
+} */
 
 input:checked ~ label .btn-modal {
    background-color: rgb(0, 0, 0, 0);
+   transform: rotate(400deg);
 }
 
 .close {
@@ -65,15 +66,28 @@ input:checked ~ label .btn-modal {
     top: 0;
     background-color: lightgray;
     display: none;
+    justify-content: center;
+    align-items: center;
 }
 
 input:checked ~ .modal {
-    display: flex;
+   display: flex
 
 }
 
+.message {
+    width: 200px;
+    height: 200px;
+    background-color: aliceblue;
+   
+}
 
-input:checked ~ .modal .close {
-    display: block
+input:checked ~ .modal .message .close {
+    display: block;
 
 }
+
+input:checked ~ .label .message .close {
+    display: none;
+}
+

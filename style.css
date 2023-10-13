@@ -4,3 +4,34 @@
     box-sizing: border-box;
 }
 
+input {
+    display: none;
+}
+
+.btn-modal {
+    width: 30px;
+    height: 3px;
+    background-color: gray;
+    position: relative;
+    left: 30px;
+    top: 30px;
+    transition: 1s;
+}
+
+.btn-modal::after, .btn-modal::before {
+    content: "";
+    width: 100%;
+    height: 3px;
+    background-color: gray;
+    position: absolute;
+    transition: 1s;
+}
+
+.btn-modal::after {
+    top: 10px;
+}
+
+.btn-modal::before {
+    top: -10px;
+}
+
